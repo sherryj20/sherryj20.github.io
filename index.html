@@ -1,0 +1,238 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego City Resell</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+      /* Custom styles for the popup */
+      .modal-background {
+          background-color: rgba(0, 0, 0, 0.8); /* Darker background for better visibility */
+      }
+  </style>
+</head>
+<body>
+  
+    <nav class="navbar has-background-danger-light has-shadow">
+        <!-- logo / brand -->
+        <div class="navbar-brand">
+          <a class="navbar-item">
+          <img src="assests/logo.png" style="max-height: 70px" class="py-2 px-2"  >
+          </a>
+        </div>
+      
+        <div class="navbar-menu" id="nav-links">
+          <!-- right links -->
+          <div class="navbar-end">
+            <a class="navbar-item">My Account</a>
+            <a class="navbar-item">Shopping Cart (0)</a>
+          </div>
+        </div>
+      </nav>
+
+       <!-- breadcrumbs -->
+  <div class="section pt-4 pb-0">
+    <nav class="breadcrumb has-arrow-separator">
+      <ul class="is-size-6 container">
+        <li><a href="#" class="has-text-grey">Lego City Resell</a></li>
+        <li><a href="#" class="has-text-grey">Shop</a></li>
+        <li <a href="#" class="has-text-grey">Discounts %</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- product info -->
+  <section class="section">
+    <div class="container">
+      <div class="columns is-vcentered is-multiline">
+        <div class="column is-6-tablet is-3-desktop">
+          <h1 class="is-size-3-mobile is-size-1-desktop title">Dream It?</h1>
+          <h2 class="is-size-3-mobile is-size-2-desktop subtitle">Build It!</h2>
+          <p>
+            Lego Star Wars is based on the Star Wars saga and franchise. The product line directly focuses on the Star Wars characters from the films and TV Series, with the exception of a few special characters.</p>
+        </div>
+        <div class="column is-6-tablet is-5-desktop has-text-centered">
+          <img src="assests/producto.jpg" alt="Lego Star Wars " class="px-6">
+        </div>
+        <div class="column is-12-tablet is-4-desktop">
+          <p class="is-size-5-mobile is-size-1-desktop title">Heavy Discount TODAY</p>
+          <p class="mb-4"> Explore our exclusive Discount section for unbeatable offers on a wide 
+            range of LEGO sets,featuring markdowns, bundle deals, and limited-time promotions,
+             ensuring you can fuel your passion for building while saving big.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-variable is-8">
+        <div class="column is-7-tablet">
+
+          <!-- tabs -->
+          <div class="tabs is-boxed is-centered">
+            <ul>
+              <li class="is-active" data-target="product-details" onclick="openTab(event, 'product-details')">
+                <a>Product Details</a> 
+              </li>
+              <li data-target="delivery-information" onclick="openTab(event, 'delivery-information')">
+                <a>Delivery Information</a>
+              </li>
+            </ul>
+          </div>
+          <div class="px-2" id="tab-content">
+            <div id="product-details">
+              <h3 class="is-size-5 title">Product Details</h3>
+              <p>Welcome to Lego City Resell, your ultimate destination for all things LEGO! Explore a vast collection of LEGO sets, bricks, and minifigures, catering to every imagination and passion. From classic sets to the latest releases, we offer a diverse range of products that inspire creativity and fun for LEGO fans of all ages.</p>
+            </div>
+            <div id="delivery-information" class="is-hidden">
+              <h3 class="is-size-5 title">Delivery Information</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reprehenderit voluptates! Quisquam dolores distinctio minima eligendi, sint enim quaerat. Totam eaque eligendi quis, itaque beatae id sit fuga voluptatibus a autem debitis sequi, officiis dolores corporis! Necessitatibus, libero voluptate? Fuga, natus iusto! Perspiciatis iure officiis rerum, illo temporibus iusto voluptatum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-5-tablet">
+          <!-- message box -->
+          <div class="message is-dark">
+            <div class="message-header">
+              <p>Earn Points with Lego</p>
+            </div>
+            <div class="message-body">
+              <p>Start earning exciting rewards with every LEGO purchase! Our exclusive points system allows you to collect points with every transaction. Accumulate points and unlock a world of benefits, including discounts on future LEGO sets, limited edition collectibles, and even access to members-only events. The more you shop, the more you earn. Join our community of LEGO enthusiasts today and begin your journey towards amazing rewards!</p>
+              </p>
+              <div class="has-text-centered">
+                <button class="button mt-5" id="signup">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- slide -->
+   <section class="section is-hidden-mobile">
+    <div class="container">
+      <h3 class="title has-text-centered is-size-4">Related Products</h3>
+      <div class="mt-5 columns is-centered is-8 is-variable">
+        <div class="column is-4-tablet is-3-desktop">
+          <div class="card">
+            <div class="card-image has-text-centered px-6">
+              <img src="assests/lego1.jpg" alt="Placeholder image">
+            </div>
+            <div class="card-content">
+              <p class="has-text-centered "button mt-5">$16.83</p>
+              <p class="title is-size-6 has-text-centered has-text-bold"> Exotic Parrot Building Toy Set</p>
+            </div>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <a href="#" class="has-text-grey"id="open-popup">View</a>
+              </p>
+
+              <div id="popup" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="box">
+                        <button class="delete" aria-label="close" id="close-popup"></button>
+                        <div class="card">
+                          <div class="card-image has-text-centered px-6">
+                            <img src="assests/lego1.jpg" alt="Placeholder image">
+                          </div>
+                          <div class="card-content">
+                            <p class="has-text-centered "button mt-5">$16.83</p>
+                            <p class="title is-size-6 has-text-centered has-text-bold"> Exotic Parrot Building Toy Set</p>
+                          </div>
+                          <footer class="card-footer">
+                            <p class="card-footer-item">
+                              <a href="#" class="has-text-grey"id="open-popup">Add to Cart</a>
+                            </p>
+              
+                    </div>
+                </div>
+            </div> 
+
+            </footer>
+          </div>
+        </div>
+
+
+        <div class="column is-4-tablet is-3-desktop">
+          <div class="card">
+            <div class="card-image has-text-centered px-6">
+              <img src="assests/lego2.jpg" alt="Placeholder image">
+            </div>
+            <div class="card-content">
+              <p class="has-text-centered">$40.98 </p>
+              <p class="title is-size-6 has-text-centered has-text-bold">Marvel Venomized Groot</p>
+            </div>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <a href="" class="has-text-grey">View</a>
+              </p>
+               <div id="popup" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="box">
+                        <button class="delete" aria-label="close" id="close-popup"></button>
+                        <p>Here is some information in the popup!</p>
+                    </div>
+                </div>
+            </div>        
+
+            </footer>
+          </div>
+        </div>
+        <div class="column is-4-tablet is-3-desktop">
+          <div class="card">
+            <div class="card-image has-text-centered px-6">
+              <img src="assests/lego3.jpg" alt="Placeholder image">
+            </div>
+            <div class="card-content">
+              <p class="has-text-centered">$100.99</p>
+              <p class="title is-size-6 has-text-centered has-text-bold"> Statue of Liberty  Model Building Set </p>
+            </div>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <a href="" class="has-text-grey">View</a>
+              </p>
+
+              <div id="popup" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="box">
+                        <button class="delete" aria-label="close" id="close-popup"></button>
+                        <p>Here is some information in the popup!</p>
+                    </div>
+                </div>
+            </div> 
+
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var popup = document.getElementById("popup");
+    var openPopup = document.getElementById("open-popup");
+    var closePopup = document.getElementById("close-popup");
+
+    openPopup.onclick = function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        popup.classList.add("is-active");
+    }
+
+     closePopup.onclick = function() {
+        popup.classList.remove("is-active");
+    }
+
+     window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.classList.remove("is-active");
+        }
+    }
+</script>
+
+</body>
+</html>
